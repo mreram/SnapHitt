@@ -4,6 +4,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
+import android.widget.LinearLayout;
 
 /**
  * Created by Reza on 10/08/2017.
@@ -14,31 +15,23 @@ public class ViewAnimationUtils {
     //expand view animation
     public static void expand(final View v) {
 //        TranslateAnimation anim = null;
+        v.getLayoutParams().height = 1;
+        v.setVisibility(View.VISIBLE);
+        v.requestLayout();
 
+        v.measure(View.MeasureSpec.makeMeasureSpec(
+                ((LinearLayout) v.getParent()).getWidth(), View.MeasureSpec.EXACTLY),
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
 
-        v.measure(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         final int targetHeight = v.getMeasuredHeight();
 
-        // Older versions of android (pre API 21) cancel animations for views with a height of 0.
-//        if ( Build.VERSION.SDK_INT > 14) {
-//            v.getLayoutParams().height = MyCustomAnimation2.mHeightSize;
-//        } else {
-//            v.getLayoutParams().height = 0;
-//        }
-//        if(Build.VERSION.SDK_INT>14) {
-//            v.getLayoutParams().height = 0;
-//        } else {
-//            v.getLayoutParams().height = ViewGroup.LayoutParams.WRAP_CONTENT;
-//        }
-        v.getLayoutParams().height =50;
-        v.setVisibility(View.VISIBLE);
         Animation a = new Animation() {
             @Override
             protected void applyTransformation(float interpolatedTime, Transformation t) {
 
                 v.getLayoutParams().height = interpolatedTime == 1
                         ? ViewGroup.LayoutParams.WRAP_CONTENT
-                        : (int) (targetHeight * interpolatedTime) +50;
+                        : (int) Math.ceil(targetHeight * interpolatedTime);
 
                 v.requestLayout();
             }
@@ -58,6 +51,7 @@ public class ViewAnimationUtils {
     public static void collapse(final View v) {
         final int initialHeight = v.getMeasuredHeight();
 
+        final int targetHeight = 1;
         Animation a = new Animation()
         {
             @Override

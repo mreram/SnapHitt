@@ -64,13 +64,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:paddingBottom="18dp"
         android:paddingRight="5dp"
         android:paddingLeft="5dp"
         android:tint="@color/gray_300"
-        app:layout_constraintBottom_toBottomOf="parent"
-
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtRate"
         app:layout_constraintVertical_bias="0.12"
@@ -80,7 +78,7 @@
         android:id="@+id/txtTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:gravity="center_vertical"
         android:paddingBottom="5dp"
         android:paddingTop="5dp"
@@ -89,16 +87,13 @@
         tools:text="22 دقیقه پیش - @zoomit"
         android:textColor="@color/gray_300"
         android:textSize="?smallFontSize"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtRate"
         app:layout_constraintVertical_bias="0.121"
         app:layout_constraintRight_toLeftOf="@+id/imgBookmark"
         android:layout_marginRight="2dp"
         android:layout_marginEnd="2dp" />
 
-    <TextView
-
-        android:id="@+id/txtDescription"
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -108,12 +103,18 @@
         android:paddingBottom="18dp"
         android:paddingLeft="8dp"
         android:paddingTop="5dp"
-        tools:text="تیم تروریستی ضد انقلاب که با هدف خرابکاری و اقدامات تروریستی قصد ورود به کشور را داشتند، توسط رزمندگان نیروی زمینی سپاه در منطقه مرزی آذربایجان غربی منهدم "
-        android:textColor="@color/gray_300"
-        android:textSize="?smallFontSize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/imgBookmark"
-        app:layout_constraintTop_toBottomOf="@+id/txtTime" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTime">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDescription"
+            tools:text="تیم تروریستی ضد انقلاب که با هدف خرابکاری و اقدامات تروریستی قصد ورود به کشور را داشتند، توسط رزمندگان نیروی زمینی سپاه در منطقه مرزی آذربایجان غربی منهدم "
+            android:textColor="@color/gray_300"
+            android:textSize="?smallFontSize"
+        />
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="0dp"
