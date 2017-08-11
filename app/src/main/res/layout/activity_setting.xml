@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_weight="1"
+        android:gravity="top|center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgPishkhan"
+                android:clickable="true"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/oval_stroke"
+                android:padding="16dp"
+                android:src="@drawable/ic_pishkhan"
+                android:tint="@color/pink_to_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="پیشخوان"
+                android:textColor="@color/pink_500"
+                android:textSize="?normalFontSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgBookmark"
+                android:clickable="true"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/oval_stroke"
+                android:padding="16dp"
+                android:src="@drawable/ic_collections_bookmark"
+                android:tint="@color/pink_to_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="نشانه ها"
+                android:textColor="@color/pink_to_white"
+                android:textSize="?normalFontSize" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:textColor="@color/gray_300"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/category"
+        android:textSize="?normalFontSize" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/dot_line"
+        android:layerType="software" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:columnCount="3">
+
+        <TextView
+            android:onClick="onCategory"
+            android:id="@+id/varzeshi"
+            android:clickable="true"
+            android:textColor="@color/gray_to_white"
+
+            android:layout_margin="5dp"
+            android:background="@drawable/round_background_selectable"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:text="ورزشی" />
+
+        <TextView
+            android:onClick="onCategory"
+
+            android:id="@+id/siasi"
+            android:clickable="true"
+            android:textColor="@color/gray_to_white"
+
+            android:layout_margin="5dp"
+            android:background="@drawable/round_background_selectable"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:text="سیاسی" />
+
+        <TextView
+            android:onClick="onCategory"
+
+            android:id="@+id/omumi"
+            android:clickable="true"
+            android:textColor="@color/gray_to_white"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_background_selectable"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:text="عمومی" />
+
+        <TextView
+            android:onClick="onCategory"
+
+            android:id="@+id/beinolmelali"
+            android:clickable="true"
+
+            android:textColor="@color/gray_to_white"
+
+            android:layout_margin="5dp"
+            android:background="@drawable/round_background_selectable"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:text="بین المللی" />
+
+        <TextView
+            android:onClick="onCategory"
+
+            android:id="@+id/tech"
+            android:textColor="@color/gray_to_white"
+            android:clickable="true"
+
+            android:layout_margin="5dp"
+            android:background="@drawable/round_background_selectable"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:text="تکنولوژی" />
+
+        <TextView
+            android:onClick="onCategory"
+
+            android:id="@+id/eghtesadi"
+            android:textColor="@color/gray_to_white"
+            android:clickable="true"
+
+            android:layout_margin="5dp"
+            android:background="@drawable/round_background_selectable"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:text="اقتصادی" />
+    </GridLayout>
+
+</LinearLayout>

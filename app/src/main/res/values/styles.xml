@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="smallFontSize">14sp</item>
+        <item name="normalFontSize">17sp</item>
+        <item name="titleFontSize">20sp</item>
+    </style>
+
+    <attr name="smallFontSize"/>
+    <attr name="normalFontSize"/>
+    <attr name="titleFontSize"/>
+</resources>

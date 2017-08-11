@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="3"
+        android:paddingBottom="5dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="5dp"
+        android:paddingRight="5dp"
+        tools:text="انهدام تیم تالو زخمی شدن ۴ تن دیگرخمی لو زخمی شدن ۴ تن دیگرخمی لو زخمی شدن ۴ تن دیگرخمی شدن ۴ تن دیگر"
+        android:textColor="@color/gray_600"
+        android:textSize="?normalFontSize"
+        app:layout_constraintLeft_toRightOf="@+id/imageView"
+        app:layout_constraintRight_toLeftOf="@+id/txtRate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:background="?selectableItemBackground"
+        android:id="@+id/txtRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:drawableTint="@color/pink_500"
+        android:drawableTop="@drawable/ic_up_arrow"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp"
+        tools:text="254"
+        android:textColor="@color/pink_500"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+            
+        android:id="@+id/imgBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="18dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:tint="@color/gray_300"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRate"
+        app:layout_constraintVertical_bias="0.12"
+        app:srcCompat="@drawable/ic_bookmark_border" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingEnd="5dp"
+        tools:text="22 دقیقه پیش - @zoomit"
+        android:textColor="@color/gray_300"
+        android:textSize="?smallFontSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRate"
+        app:layout_constraintVertical_bias="0.121"
+        app:layout_constraintRight_toLeftOf="@+id/imgBookmark"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp" />
+
+    <TextView
+
+        android:id="@+id/txtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="bottom"
+        android:paddingBottom="18dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="5dp"
+        tools:text="تیم تروریستی ضد انقلاب که با هدف خرابکاری و اقدامات تروریستی قصد ورود به کشور را داشتند، توسط رزمندگان نیروی زمینی سپاه در منطقه مرزی آذربایجان غربی منهدم "
+        android:textColor="@color/gray_300"
+        android:textSize="?smallFontSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/imgBookmark"
+        app:layout_constraintTop_toBottomOf="@+id/txtTime" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/frameLayout">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layerType="software"
+            android:src="@drawable/dot_line" />
+
+
+        <ImageView
+            android:id="@+id/imgArrowDown"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_gravity="right"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="2dp"
+            android:layerType="software"
+            android:paddingBottom="3dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="6dp"
+            android:paddingTop="2dp"
+            android:src="@drawable/tringle_dot_line"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/imgArrowUp"
+        android:layout_width="20dp"
+        android:layout_height="17dp"
+        android:layout_gravity="right"
+        android:layout_marginBottom="6.7dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layerType="software"
+        android:paddingBottom="3dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2.6dp"
+        android:paddingTop="2dp"
+        android:rotation="180"
+        android:src="@drawable/tringle_dot_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

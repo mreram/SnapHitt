@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_drawer"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:minHeight="130dp"
+    tools:layout_width="250dp"
+
+    android:layout_height="wrap_content">
+    <ImageView
+        android:background="@drawable/oval_user"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="right"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <TextView
+        android:paddingRight="16dp"
+        android:textColor="@color/gray_100"
+        android:text="@string/tasvir_shoma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

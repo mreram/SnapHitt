@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NewsIranIG</string>
+    <string name="icon_navigation_menu">icon_navigation_menu</string>
+    <string name="pishkhan">پیشخوان</string>
+    <string name="tasvir_shoma">تصویر شما</string>
+    <string name="setting">تنظیمات</string>
+    <string name="category">دسته بندی ها</string>
+
+    <string name="now">الان</string>
+    <string name="mounth_ago">" ماه پیش"</string>
+    <string name="week_ago">هفته پیش</string>
+    <string name="day_ago">روز پیش</string>
+    <string name="hour_ago">ساعت پیش</string>
+    <string name="min_ago">دقیقه پیش</string>
+    <string name="sec_ago">ثانیه پیش</string>
+    <string name="bookmarks">نشانه ها</string>
+    <string name="empty_list">اطلاعاتی وجود ندارد!</string>
+</resources>
